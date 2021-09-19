@@ -12,10 +12,11 @@
 		}
 	},
 	"require": {
-		"walnut/lib_jsonserializer": "^0.0.1",
-		"walnut/lib_identitygenerator": "^0.0.1",
-		"walnut/lib_datatype_importer": "^0.0.1",
-		"walnut/lib_modelmapper": "^0.0.2"
+		"walnut/lib_jsonserializer": ">=0.0.1",
+		"walnut/lib_identitygenerator": ">=0.0.1",
+		"walnut/lib_datatype_importer": ">=0.0.1",
+		"walnut/lib_modelmapper": ">=0.0.3",
+		"php": ">=8.0.0"
 	},
 	"require-dev": {
 		"vimeo/psalm": "^4.9.3",
