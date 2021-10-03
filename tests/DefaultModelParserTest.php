@@ -4,7 +4,6 @@ use PHPUnit\Framework\TestCase;
 use Walnut\Lib\DataType\Importer\OpenApiImporter;
 use Walnut\Lib\DataType\Importer\OpenApiReflector;
 use Walnut\Lib\JsonSerializer\PhpJsonSerializer;
-use Walnut\Lib\ModelAutoMapper\Builder\OpenApiModelBuilderFactory;
 use Walnut\Lib\ModelAutoMapper\Parser\DefaultModelParserFactory;
 
 final class DefaultModelParserMock {

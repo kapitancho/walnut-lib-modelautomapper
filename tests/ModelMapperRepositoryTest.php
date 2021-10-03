@@ -29,7 +29,7 @@ final class ModelMapperRepositoryTest extends TestCase {
 						public function all(): array {
 							return [];
 						}
-						public function byCondition(\Walnut\Lib\ModelMapper\ConditionChecker $conditionChecker): array {
+						public function byCondition(callable $conditionChecker): array {
 							return [];
 						}
 						public function byId(string $entryId): ?object {
