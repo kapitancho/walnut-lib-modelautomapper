@@ -11,7 +11,7 @@ final class OpenApiModelBuilderFactory implements ModelBuilderFactory {
 	 * @param OpenApiImporter $openApiImporter
 	 */
 	public function __construct(
-		private /*readonly*/ OpenApiImporter $openApiImporter
+		private readonly OpenApiImporter $openApiImporter
 	) {}
 
 	/**

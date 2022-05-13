@@ -6,7 +6,7 @@ use Walnut\Lib\DataType\Importer\OpenApiImporter;
 use Walnut\Lib\ModelMapper\ModelBuilder;
 
 /**
- * @template T
+ * @template T of object
  * @implements ModelBuilder<T>
  */
 final class OpenApiModelBuilder implements ModelBuilder {
@@ -15,8 +15,8 @@ final class OpenApiModelBuilder implements ModelBuilder {
 	 * @param class-string<T> $className
 	 */
 	public function __construct(
-		private /*readonly*/ OpenApiImporter $openApiImporter,
-		private /*readonly*/ string $className
+		private readonly OpenApiImporter $openApiImporter,
+		private readonly string $className
 	) {}
 
 	/**

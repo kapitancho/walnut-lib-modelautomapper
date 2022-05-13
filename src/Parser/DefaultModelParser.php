@@ -16,7 +16,7 @@ final class DefaultModelParser implements ModelParser {
 	 * @param JsonSerializer $jsonSerializer
 	 */
 	public function __construct(
-		private /*readonly*/ JsonSerializer $jsonSerializer
+		private readonly JsonSerializer $jsonSerializer
 	) {}
 
 	/**

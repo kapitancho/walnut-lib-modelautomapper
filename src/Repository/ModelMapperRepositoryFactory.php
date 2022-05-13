@@ -7,8 +7,8 @@ use Walnut\Lib\ModelMapper\ModelMapperFactory;
 
 final class ModelMapperRepositoryFactory {
 	public function __construct(
-		private /*readonly*/ ModelMapperFactory $modelMapperFactory,
-		private /*readonly*/ ModelIdentityGeneratorFactory $identityGeneratorFactory
+		private readonly ModelMapperFactory $modelMapperFactory,
+		private readonly ModelIdentityGeneratorFactory $identityGeneratorFactory
 	) {}
 
 	/**

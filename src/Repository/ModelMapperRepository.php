@@ -14,8 +14,8 @@ final class ModelMapperRepository {
 	 * @param IdentityGenerator $identityGenerator
 	 */
 	public function __construct(
-		private /*readonly*/ ModelMapper $modelMapper,
-		private /*readonly*/ IdentityGenerator $identityGenerator
+		private readonly ModelMapper $modelMapper,
+		private readonly IdentityGenerator $identityGenerator
 	) {}
 
 	/**
