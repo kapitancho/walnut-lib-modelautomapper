@@ -2,16 +2,16 @@
 
 namespace Walnut\Lib\ModelAutoMapper\Builder;
 
-use Walnut\Lib\DataType\Importer\OpenApiImporter;
+use Walnut\Lib\DataType\Importer\ClassHydrator;
 use Walnut\Lib\ModelMapper\ModelBuilderFactory;
 
 final class OpenApiModelBuilderFactory implements ModelBuilderFactory {
 
 	/**
-	 * @param OpenApiImporter $openApiImporter
+	 * @param ClassHydrator $classHydrator
 	 */
 	public function __construct(
-		private readonly OpenApiImporter $openApiImporter
+		private readonly ClassHydrator $classHydrator
 	) {}
 
 	/**
@@ -20,7 +20,7 @@ final class OpenApiModelBuilderFactory implements ModelBuilderFactory {
 	 * @return OpenApiModelBuilder<T>
 	 */
 	public function getBuilder(string $className): OpenApiModelBuilder {
-		return new OpenApiModelBuilder($this->openApiImporter, $className);
+		return new OpenApiModelBuilder($this->classHydrator, $className);
 	}
 
 }

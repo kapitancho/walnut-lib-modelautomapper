@@ -1,8 +1,10 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Walnut\Lib\DataType\Importer\OpenApiImporter;
-use Walnut\Lib\DataType\Importer\OpenApiReflector;
+use Walnut\Lib\DataType\Importer\Builder\ReflectionClassDataBuilder;
+use Walnut\Lib\DataType\Importer\ClassHydrator;
+use Walnut\Lib\DataType\Importer\DefaultClassHydrator;
+use Walnut\Lib\DataType\Importer\DefaultImporter;
 use Walnut\Lib\ModelAutoMapper\Builder\OpenApiModelBuilderFactory;
 
 final class OpenApiModelBuilderMock {
@@ -16,8 +18,10 @@ final class OpenApiModelBuilderTest extends TestCase {
 
 	public function testOk(): void {
 		$factory = new OpenApiModelBuilderFactory(
-			new OpenApiImporter(
-				new OpenApiReflector
+			new DefaultClassHydrator(
+				new DefaultImporter(
+					new ReflectionClassDataBuilder(), ''
+				)
 			)
 		);
 		$builder = $factory->getBuilder(OpenApiModelBuilderMock::class);
